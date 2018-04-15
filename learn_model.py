@@ -157,7 +157,7 @@ def main(path_train, path_model):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train-dataset', help='path containing test data', default="e2e-dataset/testset.csv")
+    parser.add_argument('--train-dataset', help='path containing test data', default="e2e-dataset/trainset.csv")
     parser.add_argument('--output-model-file', help="pathname to model", default="models/model.h5")
 
     args = parser.parse_args()
