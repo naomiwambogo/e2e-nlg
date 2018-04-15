@@ -26,10 +26,7 @@ from utils import extract_feature, \
 
 
 
-def main():
-
-    path_train = "../e2e-dataset/trainset.csv"
-    path_model = "../models/model.h5"
+def main(path_train, path_model):
 
     # -------------------
     # ---- LOAD DATA ----
@@ -165,5 +162,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    main(args.train_dataset, args.model, args.ouput_test_file)
+    main(args.train_dataset, args.output_model_file)
     
