@@ -165,5 +165,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    main(args.test_dataset, args.model, args.ouput_test_file)
+    main(args.train_dataset, args.model, args.ouput_test_file)
     
