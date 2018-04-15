@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 import pandas as pd
 import numpy as np
 import pickle
+
 
 from keras.models import Sequential
 from keras.layers import LSTM, Dense, Embedding, TimeDistributed, \
@@ -109,8 +111,8 @@ def main():
 
 	data["pred"] = data.pred.map(lambda pred: pred.replace("<begin>", ""))
 	data["pred"] = data.pred.map(lambda pred: pred.replace("<end>", ""))
-
-	np.savetxt(path_result, list(data.pred), fmt='%s')
+	
+	np.savetxt(path_result, list(data.pred), fmt='%s', encoding="utf-8")
 	print("ok!")
 
 if __name__ == "__main__":
