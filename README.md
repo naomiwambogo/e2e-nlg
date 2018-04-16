@@ -8,14 +8,14 @@ To facilitate the task, we first performed basic and advanced preprocessing. On 
 - Delexicalization: we replace all the restaurant **name**, the **food** type and the **near** location by a generic tag (e.g. NAME_TAG)
 On the REFs:
 - Removal of the punctuation
-- Delimitation of the sentence with "<BEGIN>" and "<END>" tokens
+- Delimitation of the sentence with "\<BEGIN\>" and "\<END\>" tokens
 - Delexicalization (similar to the MR)
 - Downsample stopwords : to reduce the influence of stopwords, we remove each stopword with probability 0.5
 - Padding: to get sequences of equal length
 
 ## Postprocessing
 - We replace the delexicalized word by its correspondant tag
-- We remove "<BEGIN>" and "<END>" tokens
+- We remove "\<BEGIN\>" and "\<END\>" tokens
 
 ## Notes
 - The attention decoder layer was found here: https://github.com/datalogue/keras-attention/blob/master/models/custom_recurrents.py
